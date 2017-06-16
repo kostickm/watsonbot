@@ -1,0 +1,6 @@
+---
+applications:
+ - name: watsonbot
+   random-route: true
+   memory: 128M
+   health-check-type: none
