@@ -25,31 +25,64 @@ Watson Conversation Slack Bot
 ### Clone project and update for Slack bot
 1. Git clone this sample project
 
-`git clone git@github.com:kostickm/watsonbot.git`
+`$    git clone git@github.com:kostickm/watsonbot.git`
 
-2. Copy the `env.sample` file to `.env`
-3. Update slack credentials
-4. Update Watson Conversation credentials
-5. *Optional: Run locally to test*
+2. Change to your the newly cloned repo
+
+`$    cd watsonbot/`
+
+3. Copy the `env.sample` file to a new file named `.env`
+
+`$    cp env.sample .env`
+
+4. Open and update the `.env`. file with your Slack credentials
+
+`$    vi .env`
+
+```
+# Slack
+SLACK_BOT_TOKEN=<add_slack_bot_token>
+SLACK_BOT_ID=<add_slack_bot_id>
+```
+
+5. Open and update the `.env`. file with your Watson Conversation credentials
+
+```
+# Watson conversation
+CONVERSATION_USERNAME=<add_conversation_username>
+CONVERSATION_PASSWORD=<add_conversation_password>
+WORKSPACE_ID=<add_conversation_workspace>
+```
+
+6. *Optional: Run locally to test*
+
+`$    python watsonbot.py`
+
+Chat with your `watsonbot` by sending a Slack message starting with `@watsonbot`.
 
 ### Deploy to Bluemix
-1. Log into Bluemix/CF CLI
+You are now ready to deploy your application to Bluemix.
 
-  `bluemix api https://api.ng.bluemix.net`
+1. Log into Bluemix CLI using your Bluemix credentials
 
-  `bluemix login`
+  `$    bluemix api https://api.ng.bluemix.net`
+
+  `$    bluemix login`
 
 2. Push app to Bluemix
 
-  `bluemix app push <app_name>`
+  `$    bluemix app push watsonbot`
 
 ### Chat with Watson
 1. Check that app is running in Bluemix
-2. Test out deployed app in Slack
+
+<Insert Photo>
+
+2. Test out your deployed app in Slack. Chat with your `watsonbot` by sending a Slack message starting with `@watsonbot`.
 
 ## Next Steps
-* Check out Watson Python SDK [examples](https://github.com/watson-developer-cloud/python-sdk/tree/master/examples)
-* Add in Watson Language Translation
-* Add in Watson Tone Analyzer
-* Incorporate an API
-* Have Watson tell some jokes
+* Check out the other Watson Python SDK [examples](https://github.com/watson-developer-cloud/python-sdk/tree/master/examples)
+* Add in the Watson Language Translation service
+* Add in the Watson Tone Analyzer service
+* Incorporate an API (Weather, Calendar, Github, etc.)
+* Have Watson tell a joke
