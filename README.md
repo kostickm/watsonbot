@@ -26,15 +26,15 @@ Watson Conversation Slack Bot
 This will create the basic underlying infrastructure needed for your Python application.
 1. From the Bluemix Catalog left-side menu click **Cloud Foundry Apps**
 
-<Insert Photo>
+<img src="media/CloudFoundryApps.png">
 
 2. Click the [Python](https://console.bluemix.net/catalog/starters/python) buildpack
 
-<Insert Photo>
+<img src="media/PythonBuildpack.png" width="700">
 
 3. Enter a unique **App name** and click **Create**
 
-<Insert Photo>
+<img src="media/PythonBuildpackCreate.png" width="700">
 
 ### Clone project and update for Slack bot
 1. Git clone this sample project
@@ -116,9 +116,9 @@ You are now ready to deploy your application to Bluemix.
   `$    bluemix app push`
 
 ### Chat with Watson
-1. Check that app is running in Bluemix
+1. Check that your app is running in Bluemix
 
-<Insert Photo>
+<img src="media/RunningPythonApp.png" width="700">
 
 2. Test out your deployed app in Slack. Chat with your `watsonbot` by sending a Slack message starting with `@watsonbot`.
 
