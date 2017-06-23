@@ -1,6 +1,6 @@
 ---
 applications:
- - name: watsonbot
+ - name: <Your-App-Name>
    random-route: true
    memory: 128M
    health-check-type: none

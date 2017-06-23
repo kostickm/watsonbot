@@ -10,7 +10,7 @@ import logging
 logging.basicConfig()
 
 # Load your env file
-load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
 
 # Your bot's ID as an environment variable
 BOT_ID = os.environ.get('SLACK_BOT_ID')
