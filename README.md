@@ -47,7 +47,13 @@ This will create the basic underlying infrastructure needed for your Python appl
 
 3. Copy the `env.sample` file to a new file named `.env`
 
-`$    cp env.sample .env`
+```
+# Windows
+$    copy env.sample .env
+
+# macOS/Linux
+$    cp env.sample .env
+```
 
 4. Open and update the `.env`. file with your Slack credentials
 
@@ -105,6 +111,8 @@ Chat with your `watsonbot` by sending a Slack message starting with `@watsonbot`
 ### Deploy to Bluemix
 You are now ready to deploy your application to Bluemix.
 
+*Note: You may also use the shorthand command `bx` instead of `bluemix`.*
+
 1. Log into Bluemix CLI using your Bluemix credentials
 
   `$    bluemix api https://api.ng.bluemix.net`
@@ -124,7 +132,7 @@ You are now ready to deploy your application to Bluemix.
 
 ## Next Steps
 * Check out the other Watson Python SDK [examples](https://github.com/watson-developer-cloud/python-sdk/tree/master/examples)
-* Add in the Watson Language Translation service
-* Add in the Watson Tone Analyzer service
+  * Add in the Watson Language Translation service
+  * Add in the Watson Tone Analyzer service
 * Incorporate an API (Weather, Calendar, Github, etc.)
 * Have Watson tell a joke
