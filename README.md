@@ -1,5 +1,7 @@
 # watsonbot
-Watson Conversation Slack Bot
+**Watson Conversation Slack Bot**
+
+Get started with the [Watson Conversation Service](https://console.bluemix.net/catalog/services/conversation) by creating your very own Slack Chat Bot. This demo will walk you through all of the necessary steps to configure your Watson Conversation service, set up your Slack bot, and deploy your application to Bluemix. You will be chatting with Watson in no time!
 
 ## Prerequistes
 ### Slack
