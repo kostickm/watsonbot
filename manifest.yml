@@ -1,6 +1,7 @@
 ---
 applications:
  - name: <Your-App-Name>
-   random-route: true
+   domain: mybluemix.net
    memory: 128M
    health-check-type: none
+   buildpack: https://github.com/cloudfoundry/buildpack-python.git
