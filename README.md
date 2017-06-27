@@ -24,21 +24,7 @@ Get started with the [Watson Conversation Service](https://console.bluemix.net/c
 ### Set up the Watson Conversation Service
 1. See the [instructions](conversation/README.md) for setting up and configuring your [Watson Conversation Service](https://console.bluemix.net/catalog/services/conversation).
 
-### Create a Cloud Foundry App using the Python Buildpack
-This will create the basic underlying infrastructure needed for your Python application.
-1. From the Bluemix Catalog left-side menu click **Cloud Foundry Apps**
-
-<img src="media/CloudFoundryApps.png">
-
-2. Click the [Python](https://console.bluemix.net/catalog/starters/python) buildpack
-
-<img src="media/PythonBuildpack.png" width="700">
-
-3. Enter a unique **App name** and click **Create**
-
-<img src="media/PythonBuildpackCreate.png" width="700">
-
-### Clone project and update for Slack bot
+### Clone project and update for your Slack bot
 1. Git clone this sample project
 
 `$    git clone git@github.com:kostickm/watsonbot.git`
@@ -80,9 +66,10 @@ WORKSPACE_ID=<add_conversation_workspace>
 ---
 applications:
  - name: <Your-App-Name>
-   random-route: true
+   domain: mybluemix.net
    memory: 128M
    health-check-type: none
+   buildpack: https://github.com/cloudfoundry/buildpack-python.git
 ```
 
 7. Open the `setup.py` file and replace `<Your-App-Name>`with the unique name of your app
