@@ -6,8 +6,23 @@ Get started with the [Watson Conversation Service](https://console.bluemix.net/c
 ## Prerequistes
 ### Slack
 * [Slack](https://slack.com)
-* [Slack API](https://api.slack.com/) - Create a bot
-
+* [Slack API](https://api.slack.com/)
+  * Create a new [bot](https://api.slack.com/bot-users), you will be assigned a Slack API Token
+  * Export your assigned Slack API Token
+  
+  ```
+  $    export SLACK_BOT_TOKEN='<SLACK_BOT_TOKEN>'
+  ```
+  
+  * Run the `print_bot_id.py` script
+  
+  ```
+  $    python print_bot_id.py
+  Bot ID for 'watsonbot' is <SLACK_BOT_ID>
+  ```
+  
+  * Save both of these credentials for use later in this tutorial
+  
 ### Bluemix
 * [Bluemix Account](https://console.bluemix.net/)
 * [Bluemix CLI](https://clis.ng.bluemix.net/ui/home.html)
