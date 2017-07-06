@@ -11,6 +11,10 @@ Get started with the [Watson Conversation Service](https://console.bluemix.net/c
 2. Export your assigned Slack API Token
 
 ```
+# Windows
+$    set SLACK_BOT_TOKEN='<SLACK_BOT_TOKEN>'
+
+# macOS/Linux
 $    export SLACK_BOT_TOKEN='<SLACK_BOT_TOKEN>'
 ```
   
