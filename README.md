@@ -4,6 +4,10 @@
 Get started with the [Watson Conversation Service](https://console.bluemix.net/catalog/services/conversation) by creating your very own Slack Chat Bot. This demo will walk you through all of the necessary steps to configure your Watson Conversation service, set up your Slack bot, and deploy your application to Bluemix. You will be chatting with Watson in no time!
 
 ## Prerequistes
+
+### Python
+* [Python 2.7.x](https://www.python.org/downloads/)
+
 ### Slack
 * [Slack](https://slack.com)
 * [Slack API](https://api.slack.com/)
@@ -12,20 +16,26 @@ Get started with the [Watson Conversation Service](https://console.bluemix.net/c
 
 ```
 # Windows
-$    set SLACK_BOT_TOKEN='<SLACK_BOT_TOKEN>'
+$    set SLACK_BOT_TOKEN=<SLACK_BOT_TOKEN>
 
 # macOS/Linux
 $    export SLACK_BOT_TOKEN='<SLACK_BOT_TOKEN>'
 ```
-  
-3. Run the `print_bot_id.py` script
+
+3. Install the `slackclient` python package
+
+```
+$    pip install slackclient
+```
+
+4. Run the `print_bot_id.py` script
   
 ```
 $    python print_bot_id.py
 Bot ID for 'watsonbot' is <SLACK_BOT_ID>
 ```
 
-4. Save both of these credentials for use later in this tutorial
+5. Save both of these credentials for use later in this tutorial
   
 ### Bluemix
 * [Bluemix Account](https://console.bluemix.net/)
@@ -34,10 +44,6 @@ Bot ID for 'watsonbot' is <SLACK_BOT_ID>
 ### Git
 * [Github Account](https://github.com)
 * [Git](https://git-scm.com/downloads)
-
-### Python
-***Optional**: Only needed if running locally*
-* [Python 2.7.x](https://www.python.org/downloads/)
 
 ## Steps
 ### Set up the Watson Conversation Service
@@ -110,7 +116,7 @@ setup(
 
 8. *Optional: Run locally to test*
 
-`$    pip install -r requirements.txt`
+**Note: Make sure to set/export all environment variables located in the `.env` file before running locally. Also `pip` install all python packages listed in the `requirements.txt` file.**
 
 `$    python watsonbot.py`
 
@@ -143,4 +149,4 @@ You are now ready to deploy your application to Bluemix.
   * Add in the Watson Language Translation service
   * Add in the Watson Tone Analyzer service
 * Incorporate an API (Weather, Calendar, Github, etc.)
-* Have Watson tell a joke
+* Have Watson tell you a joke
