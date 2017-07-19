@@ -11,31 +11,6 @@ Get started with the [Watson Conversation Service](https://console.bluemix.net/c
 ### Slack
 * [Slack](https://slack.com)
 * [Slack API](https://api.slack.com/)
-1. Create a new [bot](https://api.slack.com/bot-users), you will be assigned a Slack API Token
-2. Export your assigned Slack API Token
-
-```
-# Windows
-$    set SLACK_BOT_TOKEN=<SLACK_BOT_TOKEN>
-
-# macOS/Linux
-$    export SLACK_BOT_TOKEN='<SLACK_BOT_TOKEN>'
-```
-
-3. Install the `slackclient` python package
-
-```
-$    pip install slackclient
-```
-
-4. Run the `print_bot_id.py` script
-  
-```
-$    python print_bot_id.py
-Bot ID for 'watsonbot' is <SLACK_BOT_ID>
-```
-
-5. Save both of these credentials for use later in this tutorial
   
 ### Bluemix
 * [Bluemix Account](https://console.bluemix.net/)
@@ -58,7 +33,34 @@ Bot ID for 'watsonbot' is <SLACK_BOT_ID>
 
 `$    cd watsonbot/`
 
-3. Copy the `env.sample` file to a new file named `.env`
+3. Create a new Slack [bot](https://api.slack.com/bot-users), you will be assigned a Slack API Token
+
+4. Export your assigned Slack API Token
+
+```
+# Windows
+$    set SLACK_BOT_TOKEN=<SLACK_BOT_TOKEN>
+
+# macOS/Linux
+$    export SLACK_BOT_TOKEN='<SLACK_BOT_TOKEN>'
+```
+
+5. Install the `slackclient` python package
+
+```
+$    pip install slackclient
+```
+
+6. Run the `print_bot_id.py` script
+  
+```
+$    python print_bot_id.py
+Bot ID for 'watsonbot' is <SLACK_BOT_ID>
+```
+
+7. Save both of these credentials for use later in this tutorial
+
+8. Copy the `env.sample` file to a new file named `.env`
 
 ```
 # Windows
@@ -68,7 +70,7 @@ $    copy env.sample .env
 $    cp env.sample .env
 ```
 
-4. Open and update the `.env`. file with your Slack credentials
+9. Open and update the `.env`. file with your Slack credentials
 
 ```
 # Slack
@@ -76,7 +78,7 @@ SLACK_BOT_TOKEN=<add_slack_bot_token>
 SLACK_BOT_ID=<add_slack_bot_id>
 ```
 
-5. Open and update the `.env`. file with your Watson Conversation credentials
+10. Open and update the `.env`. file with your Watson Conversation credentials
 
 ```
 # Watson conversation
@@ -85,7 +87,7 @@ CONVERSATION_PASSWORD=<add_conversation_password>
 WORKSPACE_ID=<add_conversation_workspace>
 ```
 
-6. Open the `manifest.yml` file and replace `<Your-App-Name>` with the unique name of your app
+11. Open the `manifest.yml` file and replace `<Your-App-Name>` with the unique name of your app
 
 ```
 ---
@@ -97,7 +99,7 @@ applications:
    buildpack: https://github.com/cloudfoundry/buildpack-python.git
 ```
 
-7. Open the `setup.py` file and replace `<Your-App-Name>`with the unique name of your app
+12. Open the `setup.py` file and replace `<Your-App-Name>`with the unique name of your app
 
 ```
 # Always prefer setuptools over distutils
@@ -114,7 +116,7 @@ setup(
 )
 ```
 
-8. *Optional: Run locally to test*
+13. *Optional: Run locally to test*
 
 **Note: Make sure to set/export all environment variables located in the `.env` file before running locally. Also `pip` install all python packages listed in the `requirements.txt` file.**
 
